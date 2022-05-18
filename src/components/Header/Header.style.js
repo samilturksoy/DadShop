@@ -25,6 +25,18 @@ const styles = StyleSheet.create({
     },
     searchText:{
       borderColor:'red'
+    },
+    seacrh_input:{
+      backgroundColor:'white',
+      width:200,
+      height:40,
+      borderRadius:15,
+      padding:10,
+      fontSize:16
+    },
+    selectList:{
+      borderRadius:10,
+      backgroundColor:'white'
     }
   });
 
