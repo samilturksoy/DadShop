@@ -1,0 +1,53 @@
+[
+    {
+      "id": 0,
+      "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYzczN2NlYmEtNTA3Mi00MTMwLWIyMGItZThmN2YyYzRkMTkwIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+      "kategori_title":"Ev Bakım"
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZTkwNDQxOTgtMzBiYy00OGM1LTg2NmQtNmNlYTVlZDI2ZWY1Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+      "kategori_title":"Güzellik & Kişisel Bakım"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiN2Q0ZDA5MDMtYTc2My00OTliLWFmM2UtYTFkZmQ1ZTE4Mzk0Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+      "kategori_title":"Gıda"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiZTEzNDQ0MTQtMDFjMi00MzlhLTgwMDMtNzZiYTZkMmU4NDBjIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+      "kategori_title":"Su & İçecek"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMDllNmQ4OGMtOWEwNC00OWFiLTk2ZTAtYTQ4MzExOTQzM2QwIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+      "kategori_title":"Sevimli Dostlarımıza"
+    },
+    {
+        "id": 5,
+        "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOWJlNGE0YjQtMjYwNi00MTg2LWExMzctOGIxZTVhYWNlYTk3Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+        "kategori_title":"Anne-Bebek"
+    },
+    {
+        "id":6,
+        "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiNTVkN2UwZWEtNGRkOC00NWFjLTk1ZWMtODNmZTYxNmNiYTYyIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+        "kategori_title":"Kırtasiye & Hobi"
+    },
+    {
+        "id":7,
+        "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiOTVlNWRiZmEtM2UwZS00ZTJjLThiNjQtZmZkNDkzNTQzNGI5Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+        "kategori_title":"Teknoloji"
+    },
+    {
+        "id":8,
+        "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiMTI3M2VlMmYtZWRlNS00ZDM0LTk2YTgtNWNmZGQyNzY1NmFhIiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+        "kategori_title":"Avantajlı Setler"
+    },
+    {
+        "id":9,
+        "imageUrl": "https://core.rtbs.io/user/action/6ad47403c22043a795e973c7ec83dcc7/rbs.storage.get.GET_IMAGE?auth=&data=eyJpbWFnZUlkIjoiYjY5MzZmY2UtNDQxNi00YzUxLWJjMGQtNGZmYTQ3YzUxOWU4Iiwid2lkdGgiOjQwMCwiaGVpZ2h0Ijo0MDAsImZpdCI6Im91dHNpZGUiLCJjb250ZW50VHlwZSI6ImltYWdlL3dlYnAiLCJxdWFsaXR5IjozMH0&platform=WEB&",
+        "kategori_title":"Temizco"
+    }
+  ]
+
