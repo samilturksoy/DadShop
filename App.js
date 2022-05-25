@@ -1,42 +1,27 @@
-import { SafeAreaView, FlatList, StyleSheet, View } from 'react-native'
-import React from 'react'
-import Header from './src/components/Header/'
-import Banner from './src/components/Banner'
-import Categories from './src/components/Categories'
-import Kategori from './src/components/Kategori/Kategori'
-import kategori_data from './src/components/data/kategori_data.json'
-import styles from './src/components/Header/Header.style'
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './src/Pages/Home'
+import FavoritesScreen from './src/Pages/Favorites'
+import OrderScreen from './src/Pages/Order'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
 
 export default function App() {
-
-  const RenderKategori = ({ item }) => <Kategori kategori={item} />
-
+  const Tab = createBottomTabNavigator();
   return (
-    <SafeAreaView>
+    <NavigationContainer>
+      <Tab.Navigator initialRouteName='Home'>
+        <Tab.Screen name="Home" component={HomeScreen}  options={{
+          tabBarIcon: () => (
+            <Icon name='home' size={30} />
+          ),
+          title: 'Anasayfa'
 
-      <Header />
-      
-      <FlatList
-        ListHeaderComponent={
-          <View>
-            <Banner />
-            <Categories />
-          </View>}
-        data={kategori_data}
-        horizontal={false}
-        numColumns={3}
-        keyExtractor={item => item.id.toString()}
-        style={styless.kategori_flatlist}
-        renderItem={RenderKategori}
-      />
-    </SafeAreaView>
-
-  )
+        }} />
+        <Tab.Screen name="Favorites" component={FavoritesScreen} />
+        <Tab.Screen name="Order" component={OrderScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
 }
-
-const styless = StyleSheet.create({
-  kategori_flatlist: {
-    marginVertical: 10
-  }
-})
-
