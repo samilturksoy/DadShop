@@ -6,8 +6,8 @@ import FavoritesScreen from './src/Pages/Favorites'
 import OrderScreen from './src/Pages/Order'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ProfilimScreen from './src/Pages/Profilim';
-import ProfilDetayScreen from './src/Pages/ProfilDetay'
+import KategoriDetayScreen from './src/Pages/Kategori/KategoriDetay'
+
 
 
 export default function App() {
@@ -15,39 +15,24 @@ export default function App() {
   const Tab = createBottomTabNavigator();
   const Stack = createNativeStackNavigator();
 
-  const MyAccount =() =>{
+  const HomePageTab =() =>{
     return(
-      <Stack.Navigator>
-          <Stack.Screen name="Profilim" component={ProfilimScreen} />
-          <Stack.Screen name="ProfilDetay" component={ProfilDetayScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+          <Tab.Screen name="Anasayfa" component={HomeScreen} />
+          <Tab.Screen name="Order" component={OrderScreen} />
+          <Tab.Screen name="Favorites" component={FavoritesScreen} />
+      </Tab.Navigator>
     );
   };
 
-  const Urun =() =>{
-    return(
-      <Stack.Navigator>
-          <Stack.Screen name="UrunDetay" component={ProfilimScreen} />
-          <Stack.Screen name="Urun1" component={ProfilDetayScreen} />
-      </Stack.Navigator>
-    );
-  };
+ 
 
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName='Home'>
-        <Tab.Screen name="Home" component={HomeScreen} options={{
-          tabBarIcon: () => (
-            <Icon name='home' size={30} />
-          ),
-          title: 'Anasayfa'
-
-        }} />
-        <Tab.Screen name="Favorites" component={FavoritesScreen} />
-        <Tab.Screen name="Order" component={OrderScreen} />
-        <Tab.Screen name="Profil" component={MyAccount} />
-        
-      </Tab.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={HomePageTab} />
+        <Stack.Screen name='KategoriDetay' component={KategoriDetayScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
