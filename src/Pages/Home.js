@@ -1,23 +1,25 @@
-import { SafeAreaView, FlatList, StyleSheet, View } from 'react-native'
+import { SafeAreaView, FlatList, StyleSheet, View, ActivityIndicator, Text } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import Categories from '../components/Categories'
 import Kategori from '../components/Kategori/Kategori'
 import kategori_data from '../components/data/kategori_data.json'
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+
 
 export default function App({ navigation }) {
 
+
   const RenderKategori = ({ item }) => <Kategori kategori={item} onSelect={() => handdleProduct(item.id)} />
+
   const handdleProduct = id => {
     console.log(id);
     navigation.navigate("KategoriDetay", { id })
   }
   return (
     <SafeAreaView>
-
       <Header />
+
       <FlatList
         ListHeaderComponent={
           <View>
