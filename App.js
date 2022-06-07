@@ -10,6 +10,7 @@ import OrderScreen from './src/Pages/Order'
 import KategoriDetayScreen from './src/Pages/Kategori/KategoriDetay'
 import ProductsScreen from './src/Pages/Products/Products'
 import ProductDetailScreen from './src/Pages/Products/ProductDetail'
+import AccountScreen from './src/Pages/Account'
 
 
 
@@ -22,10 +23,31 @@ export default function App() {
   const HomePageTab =() =>{
     return(
       <Tab.Navigator screenOptions={{ headerShown: false }}>
-          <Tab.Screen name="Anasayfa" component={HomeScreen} />
-          <Tab.Screen name="Products" component={ProductsScreen} />
-          <Tab.Screen name="Order" component={OrderScreen} />
-          <Tab.Screen name="Favorites" component={FavoritesScreen} />
+          <Tab.Screen name="Anasayfa" component={HomeScreen} options={{
+            tabBarIcon: () => (
+              <Icon name="home" size={30} />
+            )
+          }}/>
+          <Tab.Screen name="Products" component={ProductsScreen} options={{
+            tabBarIcon: () =>(
+              <Icon name="shipping-pallet" size={30} />
+            )
+          }}/>
+          <Tab.Screen name="Order" component={OrderScreen} options={{
+            tabBarIcon : () => (
+              <Icon name="cart" size={30} />
+            )
+          }}/>
+          <Tab.Screen name="Favorites" component={FavoritesScreen} options={{
+            tabBarIcon : () =>(
+              <Icon name='cards-heart' size={30} />
+            )
+          }}/>
+          <Tab.Screen name="Account" component={AccountScreen} options={{
+            tabBarIcon : () =>(
+              <Icon name='account' size={30} />
+            )
+          }}/>
       </Tab.Navigator>
     );
   };

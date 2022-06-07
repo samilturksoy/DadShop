@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     },
     search_container:{
       flexDirection:'row',
-      justifyContent:'space-around',
+      justifyContent:'space-evenly',
       paddingTop:20,
       paddingBottom:20
     },
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     seacrh_input:{
       backgroundColor:'white',
-      width:200,
+      width:150,
       height:40,
       borderRadius:15,
       padding:10,
