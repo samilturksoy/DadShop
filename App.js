@@ -11,6 +11,7 @@ import KategoriDetayScreen from './src/Pages/Kategori/KategoriDetay'
 import ProductsScreen from './src/Pages/Products/Products'
 import ProductDetailScreen from './src/Pages/Products/ProductDetail'
 import AccountScreen from './src/Pages/Account'
+import LoginScreen from './src/Pages/Login'
 
 
 
@@ -57,6 +58,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name='Login'  component={LoginScreen} />
         <Stack.Screen name='Home'  component={HomePageTab} />
         <Stack.Screen name='KategoriDetay' component={KategoriDetayScreen} />
         <Stack.Screen name='ProductDetail' component={ProductDetailScreen} />

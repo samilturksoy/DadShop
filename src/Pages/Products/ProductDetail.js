@@ -21,7 +21,7 @@ export default function ProductDetail({ route, navigation }) {
     navigation.goBack();
   }
   return (
-    <View style={styles.product_datail_container}>
+    <SafeAreaView style={styles.product_datail_container}>
 
       <View style={{ backgroundColor: 'white', flexDirection: 'row', justifyContent: 'space-around', padding: 20, borderBottomColor: 'gray', borderBottomWidth: 0.5 }}>
         <Icon name='arrow-left' size={20} onPress={backToProducts} />
@@ -35,12 +35,7 @@ export default function ProductDetail({ route, navigation }) {
             source={{ uri: data.image }}
           />
           <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
-          <Text style={{ padding: 15 }}>{data.description}</Text>
+          
           <View style={{ alignSelf: 'flex-end' }}>
 
             <Text style={{ fontWeight: 'bold' }}>Kategori : {data.category}</Text>
@@ -58,7 +53,7 @@ export default function ProductDetail({ route, navigation }) {
       </View>
 
 
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -67,7 +62,6 @@ const styles = StyleSheet.create({
   product_datail_container: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingTop: 40,
     marginBottom: 20
   },
   buttonContainer: {
