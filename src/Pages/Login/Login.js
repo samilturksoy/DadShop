@@ -13,22 +13,23 @@ const Login = ({ navigation }) => {
         console.log(values);
         post("https://fakestoreapi.com/auth/login",values)
 
-        if (error) {
-            alert("Bir hata oluştu")
-        }
-        if (data) {
-            console.log(data)
-            if (data.status === 'Error') {
-                alert("Kullanıcı Bulunamadı")
-            }
-            else {
-                navigation.navigate("Home")
-            }
-            
-        }
+        
     }
 
-   
+    if (error) {
+        console.log(error)
+        alert("Bir hata oluştu")
+    }
+    if (data) {
+        console.log(data)
+        if (data.status === 'Error') {
+            alert("Kullanıcı Bulunamadı")
+        }
+        else {
+            navigation.navigate("Home")
+        }
+        
+    }
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.logo_container}>

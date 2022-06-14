@@ -5,9 +5,9 @@ import styles from './Input.style'
 
 const Input = ({placeholder,value,onType,iconName,isSecure}) =>{
     return (
-        <View>
+        <View style={styles.container}>
             <TextInput
-            style={styles.input}
+            style={styles.Input}
             placeholder={placeholder}
             onChangeText ={onType} 
             value={value}
