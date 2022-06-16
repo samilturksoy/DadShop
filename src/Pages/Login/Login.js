@@ -1,35 +1,39 @@
 import { View, Text, SafeAreaView, Image, Alert } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import usePost from '../../hooks/usePost'
 import { Formik } from 'formik'
 import styles from './Login.style'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Login = ({ navigation }) => {
     const { data, loading, error, post } = usePost();
 
-    function handleLogin(values){
+    useEffect(() => {
+        if (error) {
+            console.log(error)
+            alert("Bir hata oluştu")
+        }
+        if (data) {
+            console.log(data)
+            if (data.status === 'Error') {
+                alert("Kullanıcı Bulunamadı")
+            }
+            else {
+                AsyncStorage.setItem("@USER",JSON.stringify(user));
+                //burada cihazın belleğine gelen değeri yaz
+                navigation.navigate("Home")
+            }
+        }
+    }, [data, error])
+
+    function handleLogin(values) {
         console.log(values);
-        post("https://fakestoreapi.com/auth/login",values)
-
-        
+        post("https://fakestoreapi.com/auth/login", values)
     }
 
-    if (error) {
-        console.log(error)
-        alert("Bir hata oluştu")
-    }
-    if (data) {
-        console.log(data)
-        if (data.status === 'Error') {
-            alert("Kullanıcı Bulunamadı")
-        }
-        else {
-            navigation.navigate("Home")
-        }
-        
-    }
+
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.logo_container}>
@@ -66,4 +70,25 @@ const Login = ({ navigation }) => {
     );
 };
 
+const user = {
+    id:1,
+    email:'John@gmail.com',
+    username:'johnd',
+    password:'m38rmF$',
+    name:{
+        firstname:'John',
+        lastname:'Doe'
+    },
+    address:{
+        city:'kilcoole',
+        street:'7835 new road',
+        number:3,
+        zipcode:'12926-3874',
+        geolocation:{
+            lat:'-37.3159',
+            long:'81.1496'
+        }
+    },
+    phone:'1-570-236-7033'
+}
 export default Login;

@@ -9,17 +9,19 @@ export default function Products({ navigation }) {
 
     const { loading, data, error } = useFetch('https://fakestoreapi.com/products');
 
-    if (loading) {
-        return <ActivityIndicator size={'large'} />
-    }
-    if (error) {
-        return <Text>{error}</Text>
-    }
     const RenderProducts = ({ item }) => <ProductsComponent products={item} onSelect={() => handdleProduct(item.id)} />
 
     const handdleProduct = id => {
         console.log(id);
         navigation.navigate("ProductDetail", { id })
+    }
+
+
+    if (loading) {
+        return <ActivityIndicator size={'large'} />
+    }
+    if (error) {
+        return <Text>{error}</Text>
     }
     return (
         <SafeAreaView>
