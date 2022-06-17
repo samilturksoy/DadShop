@@ -1,10 +1,16 @@
-import { View, Text,SafeAreaView } from 'react-native'
+import { View, Text,SafeAreaView,TouchableOpacity} from 'react-native'
 import React from 'react'
+import { useDispatch } from 'react-redux'
+
 
 export default function Account() {
+  const dispatch = useDispatch()
   return (
     <SafeAreaView>
-      <Text>Account</Text>
+      <TouchableOpacity onPress={()=>dispatch({type: 'REMOVE_USER'})}>
+            <Text>Çıkış yap</Text>
+
+            </TouchableOpacity>
     </SafeAreaView>
   )
 }

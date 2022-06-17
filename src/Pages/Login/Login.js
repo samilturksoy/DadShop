@@ -1,14 +1,15 @@
-import { View, Text, SafeAreaView, Image, Alert } from 'react-native'
+import { View, Text, SafeAreaView, Image, Alert ,TouchableOpacity} from 'react-native'
 import React, { useEffect } from 'react'
 import Input from '../../components/Input'
 import Button from '../../components/Button'
 import usePost from '../../hooks/usePost'
 import { Formik } from 'formik'
 import styles from './Login.style'
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useDispatch } from 'react-redux'
 
 const Login = ({ navigation }) => {
     const { data, loading, error, post } = usePost();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if (error) {
@@ -21,9 +22,9 @@ const Login = ({ navigation }) => {
                 alert("Kullanıcı Bulunamadı")
             }
             else {
-                AsyncStorage.setItem("@USER",JSON.stringify(user));
-                //burada cihazın belleğine gelen değeri yaz
-                navigation.navigate("Home")
+                dispatch({type:'SET_USER',payload:{user}})
+                //burada cihazın belleğine gelen değeri yazmadık reducers dosyamızda yazmayı tercih ettik 
+               // navigation.navigate("Home") // navigate etmeye gerek var mı 
             }
         }
     }, [data, error])
@@ -36,7 +37,9 @@ const Login = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
+            
             <View style={styles.logo_container}>
+            
                 <Image style={styles.logo} source={require("../../assets/login_logo.png")} />
             </View>
 
@@ -66,6 +69,7 @@ const Login = ({ navigation }) => {
                             <Button text="Giriş Yap" onPress={handleSubmit} loading={loading} />
                         </View>)}
             </Formik>
+            
         </SafeAreaView>
     );
 };
